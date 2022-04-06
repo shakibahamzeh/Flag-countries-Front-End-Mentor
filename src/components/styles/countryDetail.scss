@@ -1,0 +1,99 @@
+@import "mixin";
+@import "variables";
+
+
+.detailContainer{
+   background-color: $bgDark;
+   padding: 40px 100px;
+   height: calc(100vh - 70px);
+   .backBtn{
+       text-decoration: none;
+       padding: 5px 20px;
+       display: inline-flex;
+       align-items: center;
+       background-color: $navColor;
+       color: $darkText;
+       box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+       cursor: pointer;
+       .arrowIcon{
+          font-size: 20px;
+          margin-right: 0.5rem;
+       }
+   }
+}
+.detailWrapper{
+    display: flex;
+    margin-top: 2rem;
+    img{
+        width: 400px;
+        height: 100%;
+    }
+}
+.detailDescription{
+    margin-left: 50px;
+    h2{
+        padding-bottom: 40px;
+        color: $darkText;
+    }
+    .wrapper{
+    display: flex;
+    div{
+        padding-right: 100px;
+        p{
+            @include textStyle($darkText,14px,600);
+            padding-bottom: 0.5rem;
+            span{
+                font-weight: 300;
+                padding-left: 0.5rem;
+            }
+        }
+    } 
+}
+  .border{
+        p{
+            @include textStyle($darkText,14px,600);
+            
+            span{
+                display: inline-block;
+                padding: 10px;
+                background-color: $navColor;
+                margin: 0 .7rem;
+                border-radius: 5px;
+                box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+            } 
+        }
+    }
+}
+
+
+.detailContainer-light{
+    background-color: $bgLight;
+    .backBtn-light{
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+        background-color: $bgNavLight;
+        color: $lightText;
+    }
+}
+
+.detailDescription-light{
+    h2{
+        color: $lightText;
+    }
+    .wrapper{
+    div{
+        p{
+            @include textStyle($lightText,14px,600);
+        }
+    }
+   
+}
+.border-light{
+        p{
+            @include textStyle($lightText,14px,600);
+            span{
+                background-color: $bgNavLight;
+                box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+            } 
+        }
+    }
+}

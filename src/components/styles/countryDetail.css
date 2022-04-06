@@ -1,0 +1,119 @@
+.detailContainer {
+  background-color: #202c37;
+  padding: 40px 100px;
+  height: calc(100vh - 70px);
+}
+
+.detailContainer .backBtn {
+  text-decoration: none;
+  padding: 5px 20px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2b3945;
+  color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  cursor: pointer;
+}
+
+.detailContainer .backBtn .arrowIcon {
+  font-size: 20px;
+  margin-right: 0.5rem;
+}
+
+.detailWrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 2rem;
+}
+
+.detailWrapper img {
+  width: 400px;
+  height: 100%;
+}
+
+.detailDescription {
+  margin-left: 50px;
+}
+
+.detailDescription h2 {
+  padding-bottom: 40px;
+  color: white;
+}
+
+.detailDescription .wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.detailDescription .wrapper div {
+  padding-right: 100px;
+}
+
+.detailDescription .wrapper div p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.detailDescription .wrapper div p span {
+  font-weight: 300;
+  padding-left: 0.5rem;
+}
+
+.detailDescription .border p {
+  color: white;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detailDescription .border p span {
+  display: inline-block;
+  padding: 10px;
+  background-color: #2b3945;
+  margin: 0 .7rem;
+  border-radius: 5px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.detailContainer-light {
+  background-color: #fafafa;
+}
+
+.detailContainer-light .backBtn-light {
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: white;
+  color: #111517;
+}
+
+.detailDescription-light h2 {
+  color: #111517;
+}
+
+.detailDescription-light .wrapper div p {
+  color: #111517;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detailDescription-light .border-light p {
+  color: #111517;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detailDescription-light .border-light p span {
+  background-color: white;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+/*# sourceMappingURL=countryDetail.css.map */

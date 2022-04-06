@@ -1,0 +1,10 @@
+@mixin textStyle($color,$fontSize,$fontWeight){
+    color:$color;
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+}
+@mixin containerStyle($display,$justifyContent,$alignItem){
+    display: $display;
+    justify-content: $justifyContent;
+    align-items: $alignItem;
+}

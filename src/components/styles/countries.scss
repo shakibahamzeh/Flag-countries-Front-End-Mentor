@@ -1,0 +1,73 @@
+@import "mixin";
+@import "variables";
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: $bgDark;
+    height: auto;
+}
+.container-light{
+    background-color: $bgLight;
+}
+.formContainer{
+    form{
+       @include containerStyle(flex,space-between,center);
+       padding: 20px 30px;
+       input{
+           border: none;
+           outline: none;
+           padding: 5px 15px 5px 50px;
+           width: 300px;
+           height: 35px;
+           border-radius: 5px;
+           background-color: $navColor;
+           caret-color: $darkText;
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+           position: relative;
+           
+       }
+       .searchIcon{
+           position: absolute;
+           top: 16%;
+           left:45px;
+           @include textStyle($darkText,18px,500);
+       }
+       ::placeholder{
+           color: $darkText;
+       }
+       select{
+           color: $darkText;
+           outline: none;
+           border: none;
+           padding: 7px 10px;
+           border-radius: 5px;
+           background-color: $navColor;
+           width: 200px;
+           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+       }
+    }
+    .formControl-light {
+        input{
+        background-color: $bgNavLight;
+        caret-color: $lightText;
+        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    }
+     ::placeholder{
+        color: $lightText;
+    }
+    select{
+           color: $lightText;
+           background-color: $bgNavLight;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+       }
+}
+
+}
+.countryContainer{
+    width: 100%;
+    @include containerStyle(flex,space-between,center);
+    flex-wrap: wrap;
+    padding: 0 30px;
+}

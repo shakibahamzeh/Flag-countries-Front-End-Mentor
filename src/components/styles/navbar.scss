@@ -1,0 +1,36 @@
+@import "mixin";
+@import "variables";
+
+
+.navbar{
+   @include containerStyle(flex,space-between,center);
+    background-color: $navColor;
+    height: 70px;
+    padding: 0 30px;
+   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+    h2{
+       @include textStyle($darkText,24px,bold);
+    }
+    button{
+       padding: 5px;
+       outline: none;
+       border: none;
+       color: $darkText;
+       background-color: transparent;
+       display: inline-flex;
+       align-items: center;
+     .darkModeIcon{
+        margin-right: 0.5rem;
+     }
+    }
+}
+.navbar-light{
+   background-color: $bgNavLight; 
+   h2{
+       @include textStyle($lightText,24px,bold);
+   }
+   button{
+      color: $lightText;
+   }
+}
+

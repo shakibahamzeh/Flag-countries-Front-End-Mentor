@@ -1,0 +1,126 @@
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background-color: #202c37;
+  height: auto;
+}
+
+.container-light {
+  background-color: #fafafa;
+}
+
+.formContainer form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 20px 30px;
+}
+
+.formContainer form input {
+  border: none;
+  outline: none;
+  padding: 5px 15px 5px 50px;
+  width: 300px;
+  height: 35px;
+  border-radius: 5px;
+  background-color: #2b3945;
+  caret-color: white;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  position: relative;
+}
+
+.formContainer form .searchIcon {
+  position: absolute;
+  top: 16%;
+  left: 45px;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.formContainer form ::-webkit-input-placeholder {
+  color: white;
+}
+
+.formContainer form :-ms-input-placeholder {
+  color: white;
+}
+
+.formContainer form ::-ms-input-placeholder {
+  color: white;
+}
+
+.formContainer form ::placeholder {
+  color: white;
+}
+
+.formContainer form select {
+  color: white;
+  outline: none;
+  border: none;
+  padding: 7px 10px;
+  border-radius: 5px;
+  background-color: #2b3945;
+  width: 200px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.formContainer .formControl-light input {
+  background-color: white;
+  caret-color: #111517;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.formContainer .formControl-light ::-webkit-input-placeholder {
+  color: #111517;
+}
+
+.formContainer .formControl-light :-ms-input-placeholder {
+  color: #111517;
+}
+
+.formContainer .formControl-light ::-ms-input-placeholder {
+  color: #111517;
+}
+
+.formContainer .formControl-light ::placeholder {
+  color: #111517;
+}
+
+.formContainer .formControl-light select {
+  color: #111517;
+  background-color: white;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.countryContainer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  padding: 0 30px;
+}
+/*# sourceMappingURL=countries.css.map */

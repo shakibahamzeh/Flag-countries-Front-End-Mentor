@@ -1,0 +1,55 @@
+.navbar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #2b3945;
+  height: 70px;
+  padding: 0 30px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+}
+
+.navbar h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar button {
+  padding: 5px;
+  outline: none;
+  border: none;
+  color: white;
+  background-color: transparent;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar button .darkModeIcon {
+  margin-right: 0.5rem;
+}
+
+.navbar-light {
+  background-color: white;
+}
+
+.navbar-light h2 {
+  color: #111517;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.navbar-light button {
+  color: #111517;
+}
+/*# sourceMappingURL=navbar.css.map */
