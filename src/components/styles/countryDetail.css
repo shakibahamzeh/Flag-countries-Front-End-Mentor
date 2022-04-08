@@ -1,119 +1,114 @@
 .detailContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
   background-color: #202c37;
-  padding: 40px 100px;
-  height: calc(100vh - 70px);
+  height: auto;
+  padding-bottom: 100px;
 }
 
 .detailContainer .backBtn {
+  width: 100px;
   text-decoration: none;
-  padding: 5px 20px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: #2b3945;
+  padding: 7px;
+  margin: 40px;
   color: white;
+  background-color: #2b3945;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  cursor: pointer;
+  border-radius: 3px;
 }
 
 .detailContainer .backBtn .arrowIcon {
-  font-size: 20px;
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .detailWrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1.7fr 1fr;
+      grid-template-columns: 2fr 1.7fr 1fr;
+  padding: 20px 30px;
+  gap: 15px;
+}
+
+.detailWrapper .container {
+  color: white;
+  font-size: 16px;
+  font-weight: 300;
+}
+
+.detailWrapper .container img {
+  width: 100%;
+  display: block;
+}
+
+.detailWrapper .container h2 {
+  color: white;
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  padding-top: 1rem;
+}
+
+.detailWrapper .container .borderContainer {
   margin-top: 2rem;
 }
 
-.detailWrapper img {
-  width: 400px;
-  height: 100%;
+.detailWrapper div.container:last-child {
+  padding-top: 4.5rem;
 }
 
-.detailDescription {
-  margin-left: 50px;
-}
-
-.detailDescription h2 {
-  padding-bottom: 40px;
-  color: white;
-}
-
-.detailDescription .wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.detailDescription .wrapper div {
-  padding-right: 100px;
-}
-
-.detailDescription .wrapper div p {
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-}
-
-.detailDescription .wrapper div p span {
+.detailWrapper .container-light {
+  color: #111517;
+  font-size: 16px;
   font-weight: 300;
-  padding-left: 0.5rem;
 }
 
-.detailDescription .border p {
-  color: white;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.detailDescription .border p span {
-  display: inline-block;
-  padding: 10px;
-  background-color: #2b3945;
-  margin: 0 .7rem;
-  border-radius: 5px;
-  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+.detailWrapper .container-light h2 {
+  color: #111517;
+  font-size: 24px;
+  font-weight: 700;
 }
 
 .detailContainer-light {
   background-color: #fafafa;
 }
 
-.detailContainer-light .backBtn-light {
-  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
-  background-color: white;
+.detailContainer-light .backBtn {
   color: #111517;
-}
-
-.detailDescription-light h2 {
-  color: #111517;
-}
-
-.detailDescription-light .wrapper div p {
-  color: #111517;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.detailDescription-light .border-light p {
-  color: #111517;
-  font-size: 14px;
-  font-weight: 600;
-}
-
-.detailDescription-light .border-light p span {
   background-color: white;
   -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+@media (max-width: 850px) {
+  .detailWrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%;
+  }
+  .detailWrapper .container {
+    width: 100%;
+  }
+  .detailWrapper div.container:last-child {
+    padding-top: 0.5rem;
+  }
 }
 /*# sourceMappingURL=countryDetail.css.map */

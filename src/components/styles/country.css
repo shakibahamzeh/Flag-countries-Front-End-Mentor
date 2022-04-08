@@ -16,10 +16,11 @@
 
 .countryWrapper a {
   text-decoration: none;
+  display: inline-block;
 }
 
 .countryWrapper img {
-  max-width: 100%;
+  width: 100%;
   height: 200px;
   display: block;
   -o-object-fit: cover;
@@ -66,5 +67,17 @@
 
 .countryWrapper-light p span {
   font-weight: 300;
+}
+
+@media (max-width: 1124px) {
+  .countryWrapper {
+    width: 45%;
+  }
+}
+
+@media (max-width: 700px) {
+  .countryWrapper {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=country.css.map */

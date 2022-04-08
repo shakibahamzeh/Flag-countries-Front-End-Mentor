@@ -5,6 +5,7 @@
 .countryWrapper{
     a{
         text-decoration: none;
+        display: inline-block;
     }
     display: flex;
     flex-direction: column;
@@ -47,5 +48,19 @@
        span{
            font-weight: 300;
        }
+    }
+}
+
+
+
+@media (max-width:1124px) {
+    .countryWrapper{
+        width: 45%;
+    }
+}
+
+@media (max-width:700px) {
+    .countryWrapper{
+        width: 100%;
     }
 }

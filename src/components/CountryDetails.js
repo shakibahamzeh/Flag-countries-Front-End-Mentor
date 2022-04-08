@@ -5,6 +5,7 @@ import "./styles/countryDetail.scss";
 //context
 import { CountriesContext } from '../context/CountriesContextProvider';
 import { ThemeContext } from '../context/ThemeContextProvider';
+import Borders from './Borders';
 
 
 function CountryDetails(props) {
@@ -29,31 +30,30 @@ function CountryDetails(props) {
     <div className={`detailContainer ${darkMode ? "detailContainer-dark" : "detailContainer-light"}`}>
       <Link to="/countries" className={`backBtn ${darkMode ? "backBtn-dark" : "backBtn-light"}`}><ArrowBackIcon className='arrowIcon'/>Back</Link>
        <div className='detailWrapper'>
-         <div>
+         <div className={`container ${darkMode ? "container-dark" : "container-light"}`}>
            <img src={country.flag} alt="flag"/>
          </div>
-         <div className={`detailDescription ${darkMode ? "detailDescription-dark" : "detailDescription-light"}`}>
-         <h2>{country.name}</h2>
-         <div className='wrapper'>
-         <div>
-           <p>Native Name: <span>{country.nativeName}</span></p>
-           <p>Population: <span>{country.population}</span></p>
-           <p>Region: <span>{country.region}</span></p>
-           <p>Sub Region: <span>{country.subregion}</span></p>
-           <p>Capital: <span>{country.capital}</span></p>
-         </div>
-         <div>
-           <p>Top Level Domain: <span>{country.topLevelDomain}</span></p>
-           <p>Currencies: <span>{country.currencies[0].name}</span></p>
-           <p>Language: <span>{country.languages[0].name}</span></p>
+         <div className={`container ${darkMode ? "container-dark" : "container-light"}`}>
+          <h2>{country.name}</h2>
+           <p>Native Name:{country.nativeName}</p>
+           <p>Population: {country.population}</p>
+           <p>Region: {country.region}</p>
+           <p>Sub Region:{country.subregion}</p>
+           <p>Capital: {country.capital}</p>
+           <div className={`borderContainer ${darkMode ? "borderContainer-dark" : "borderContainer-light"}`}>
+           {country.borders  && country?.borders.length > 0 && <div>Border Countries : {country?.borders.map( arr => <Borders key={arr} borders={arr}/>)}</div>}
          </div>
          </div>
-         <div className={`border ${darkMode ? "border-dark" : "border-light"}`}>
-           {country.borders  && country?.borders.length > 0 && <p>Border Countries : {country?.borders.map( arr => <span key={arr}>{arr}</span>)}</p>}
+         <div className={`container ${darkMode ? "container-dark" : "container-light"}`}>
+           <p>Top Level Domain: {country.topLevelDomain}</p>
+           <p>Currencies:{country.currencies[0].name}</p>
+           <p>Language: {country.languages[0].name}</p>
          </div>
+         
+         
          </div>
-       </div>
-    </div>
+      </div>
+   
   )
 }
 

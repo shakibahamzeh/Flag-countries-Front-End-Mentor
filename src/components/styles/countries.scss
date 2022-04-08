@@ -3,6 +3,7 @@
 
 
 .container{
+    width: 100%;
     display: flex;
     flex-direction: column;
     background-color: $bgDark;
@@ -15,7 +16,9 @@
     form{
        @include containerStyle(flex,space-between,center);
        padding: 20px 30px;
-       input{
+       .formControl{
+           position: relative;
+        input{
            border: none;
            outline: none;
            padding: 5px 15px 5px 50px;
@@ -25,13 +28,11 @@
            background-color: $navColor;
            caret-color: $darkText;
            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-           position: relative;
-           
        }
        .searchIcon{
            position: absolute;
-           top: 16%;
-           left:45px;
+           top: 10px;
+           left:25px;
            @include textStyle($darkText,18px,500);
        }
        ::placeholder{
@@ -47,12 +48,17 @@
            width: 200px;
            box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
        }
+       } 
     }
-    .formControl-light {
-        input{
-        background-color: $bgNavLight;
-        caret-color: $lightText;
-        box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+    .formContainer{
+        form{
+         .formControl-light {
+           input{
+           background-color: $bgNavLight;
+           caret-color: $lightText;
+           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
     }
      ::placeholder{
         color: $lightText;
@@ -62,12 +68,55 @@
            background-color: $bgNavLight;
            box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
        }
+        .searchIcon{
+           @include textStyle($lightText,18px,500);
+       }
 }
 
 }
+        }
+  
+    
 .countryContainer{
     width: 100%;
     @include containerStyle(flex,space-between,center);
-    flex-wrap: wrap;
     padding: 0 30px;
+    flex-wrap: wrap;
+}
+
+@media (max-width:590px) {
+.formContainer{
+    form{
+        width: 100%;
+        @include containerStyle(flex,center,center);
+        flex-direction: column;
+        flex-wrap: wrap;
+        padding: 20px 30px;
+        .formControl{
+            input{
+              margin-bottom: 2rem;
+        }
+       
+        select{
+        width: 300px;
+        padding-left: 50px;
+        }
+        }
+    }
+}
+}
+@media (max-width:375px) {
+.formContainer{
+    form{
+        .formControl{
+            input{
+        width: 250px;
+        }
+        select{
+        width: 250px;
+        }
+        }
+    }
+    
+}
 }

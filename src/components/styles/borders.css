@@ -1,0 +1,21 @@
+.border {
+  display: inline-block;
+  padding: 10px;
+  margin: 0.5rem;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+          box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  background-color: #2b3945;
+  color: white;
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.border-light {
+  color: #111517;
+  font-size: 14px;
+  font-weight: 300;
+  -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+          box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  background-color: white;
+}
+/*# sourceMappingURL=borders.css.map */

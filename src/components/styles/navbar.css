@@ -52,4 +52,29 @@
 .navbar-light button {
   color: #111517;
 }
+
+@media (max-width: 590px) {
+  .navbar h2 {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navbar h2 {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 350px) {
+  .navbar h2 {
+    font-size: 16px;
+  }
+  .navbar button {
+    font-size: 14px;
+    padding: 2px;
+  }
+  .navbar .darkModeIcon {
+    font-size: 14px;
+  }
+}
 /*# sourceMappingURL=navbar.css.map */

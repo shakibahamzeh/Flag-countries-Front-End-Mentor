@@ -1,4 +1,5 @@
 .container {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,7 +28,11 @@
   padding: 20px 30px;
 }
 
-.formContainer form input {
+.formContainer form .formControl {
+  position: relative;
+}
+
+.formContainer form .formControl input {
   border: none;
   outline: none;
   padding: 5px 15px 5px 50px;
@@ -38,35 +43,34 @@
   caret-color: white;
   -webkit-box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
-  position: relative;
 }
 
-.formContainer form .searchIcon {
+.formContainer form .formControl .searchIcon {
   position: absolute;
-  top: 16%;
-  left: 45px;
+  top: 10px;
+  left: 25px;
   color: white;
   font-size: 18px;
   font-weight: 500;
 }
 
-.formContainer form ::-webkit-input-placeholder {
+.formContainer form .formControl ::-webkit-input-placeholder {
   color: white;
 }
 
-.formContainer form :-ms-input-placeholder {
+.formContainer form .formControl :-ms-input-placeholder {
   color: white;
 }
 
-.formContainer form ::-ms-input-placeholder {
+.formContainer form .formControl ::-ms-input-placeholder {
   color: white;
 }
 
-.formContainer form ::placeholder {
+.formContainer form .formControl ::placeholder {
   color: white;
 }
 
-.formContainer form select {
+.formContainer form .formControl select {
   color: white;
   outline: none;
   border: none;
@@ -78,34 +82,40 @@
           box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
 }
 
-.formContainer .formControl-light input {
+.formContainer form .formControl-light input {
   background-color: white;
   caret-color: #111517;
   -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
 }
 
-.formContainer .formControl-light ::-webkit-input-placeholder {
+.formContainer form .formControl-light ::-webkit-input-placeholder {
   color: #111517;
 }
 
-.formContainer .formControl-light :-ms-input-placeholder {
+.formContainer form .formControl-light :-ms-input-placeholder {
   color: #111517;
 }
 
-.formContainer .formControl-light ::-ms-input-placeholder {
+.formContainer form .formControl-light ::-ms-input-placeholder {
   color: #111517;
 }
 
-.formContainer .formControl-light ::placeholder {
+.formContainer form .formControl-light ::placeholder {
   color: #111517;
 }
 
-.formContainer .formControl-light select {
+.formContainer form .formControl-light select {
   color: #111517;
   background-color: white;
   -webkit-box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
           box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+}
+
+.formContainer form .formControl-light .searchIcon {
+  color: #111517;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .countryContainer {
@@ -119,8 +129,46 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0 30px;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  padding: 0 30px;
+}
+
+@media (max-width: 590px) {
+  .formContainer form {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px 30px;
+  }
+  .formContainer form .formControl input {
+    margin-bottom: 2rem;
+  }
+  .formContainer form .formControl select {
+    width: 300px;
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 375px) {
+  .formContainer form .formControl input {
+    width: 250px;
+  }
+  .formContainer form .formControl select {
+    width: 250px;
+  }
 }
 /*# sourceMappingURL=countries.css.map */
