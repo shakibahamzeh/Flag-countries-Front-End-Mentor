@@ -1,22 +1,21 @@
 import React,{useContext,useState} from 'react';
 import "./styles/countries.scss";
 import SearchIcon from '@mui/icons-material/Search';
-
+import Country from './Country';
 
 
 //context
 import {CountriesContext} from "../context/CountriesContextProvider";
-import Country from './Country';
-
-
 import { ThemeContext } from '../context/ThemeContextProvider';
 
 const Countries=()=> {
-    const {countries,loading,error} = useContext(CountriesContext);
+  //context 
+    const {countries} = useContext(CountriesContext);
     const Theme = useContext(ThemeContext);
     const darkMode = Theme.state.darkMode;
-
+  // state
     const [search, setSearch] = useState("");
+  //handler
     const changeHandler=(e)=>{
        setSearch(e.target.value); 
     }
@@ -28,7 +27,7 @@ const Countries=()=> {
   
 
   return (
-<div className={`container ${darkMode ? "container-dark" : "container-light"}`}>
+    <div className={`container ${darkMode ? "container-dark" : "container-light"}`}>
  
      {/*form*/}
      <div className={`formContainer ${darkMode ? "formContainer-dark" : "formContainer-light"}`}>

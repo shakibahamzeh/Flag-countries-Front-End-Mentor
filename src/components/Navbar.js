@@ -1,10 +1,15 @@
 import React,{useContext} from 'react';
-import { ThemeContext } from '../context/ThemeContextProvider';
 import "./styles/navbar.scss";
 import DarkModeIcon from '@mui/icons-material/DarkMode';
+//context
+import { ThemeContext } from '../context/ThemeContextProvider';
+
+
 const Navbar=()=> {
+  //context
     const Theme = useContext(ThemeContext);
     const darkMode = Theme.state.darkMode;
+    //darkMode handler
     const DarkModeHandler = () => {
     if (darkMode)
       Theme.dispatch({ type: "LIGHT_MODE" });

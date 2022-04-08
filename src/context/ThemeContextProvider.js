@@ -1,10 +1,11 @@
 import React,{createContext,useReducer}from 'react';
-
+//create context
 export const ThemeContext = createContext();
+//initial state
 const initialState = { 
     darkMode: true,
  };
-
+//reducer
  const themeReducer = (state, action) => {
   switch (action.type) {
     case "LIGHT_MODE":
@@ -16,6 +17,7 @@ const initialState = {
   }
 };
 const ThemeContextProvider = ({children}) =>{
+  //use reducer
     const [state, dispatch] = useReducer(themeReducer, initialState);
   return (
     <ThemeContext.Provider value={{state,dispatch}}>

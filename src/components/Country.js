@@ -1,9 +1,11 @@
 import React,{useContext} from 'react';
 import {Link} from "react-router-dom";
-import {ThemeContext} from "../context/ThemeContextProvider";
 import "./styles/country.scss";
+//context
+import {ThemeContext} from "../context/ThemeContextProvider";
 
 function Country({countryData}) {
+  //context
     const Theme = useContext(ThemeContext);
     const darkMode = Theme.state.darkMode; 
  

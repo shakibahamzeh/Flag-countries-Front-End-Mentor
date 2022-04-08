@@ -7,8 +7,8 @@ export const CountriesContext=createContext();
 
 const CountriesContextProvider=({children})=> {
  const [countries,setCountries]=useState([]);
- const [loading, setLoading] = useState(true)
- const [error, setError] = useState('')
+ const [loading, setLoading] = useState(true);
+ const [error, setError] = useState('');
 
   
  useEffect(()=>{

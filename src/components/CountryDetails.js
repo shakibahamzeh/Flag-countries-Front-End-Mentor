@@ -1,10 +1,11 @@
 import React,{useContext} from 'react';
-import { CountriesContext } from '../context/CountriesContextProvider';
-import { ThemeContext } from '../context/ThemeContextProvider';
 import {Link, useParams} from "react-router-dom";
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
 import "./styles/countryDetail.scss";
+//context
+import { CountriesContext } from '../context/CountriesContextProvider';
+import { ThemeContext } from '../context/ThemeContextProvider';
+
 
 function CountryDetails(props) {
     const params=useParams();
@@ -12,7 +13,7 @@ function CountryDetails(props) {
     // console.log(countryName)
     const {countries,loading} = useContext(CountriesContext);
     // console.log(countries);
-console.log(loading)
+    //console.log(loading);
     const Theme = useContext(ThemeContext);
     const darkMode = Theme.state.darkMode;
       
@@ -48,7 +49,7 @@ console.log(loading)
          </div>
          </div>
          <div className={`border ${darkMode ? "border-dark" : "border-light"}`}>
-           {country.borders  && country?.borders.length > 0 && <p>Border Countries : {country?.borders.map( arr => <span>{arr}</span>)}</p>}
+           {country.borders  && country?.borders.length > 0 && <p>Border Countries : {country?.borders.map( arr => <span key={arr}>{arr}</span>)}</p>}
          </div>
          </div>
        </div>
